@@ -2,7 +2,7 @@
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>Role</fullName>
+        <fullName>Roles</fullName>
         <picklist>
             <picklistValues>
                 <fullName>Business User</fullName>
