@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ConvertLead</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Create_Opportunity</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fieldSets>
+        <fullName>CampaignMember</fullName>
+        <description>As Inline VF in Child Campaign Detail Page</description>
+        <displayedFields>
+            <field>Contact.AccountId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>FirstRespondedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Contact.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Lead.Company</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ContactId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LeadId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Lead.Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CampaignId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>HasResponded</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>State__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Broker_Dealer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Broker_Dealer_Category__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Last_Activity_By__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>CampaignMember</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>DisplayCM</fullName>
+        <description>Inline VF in Child Campaign</description>
+        <displayedFields>
+            <field>City__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>State__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Broker_Dealer__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Broker_Dealer_Category__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Last_Activity_By__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>DisplayCM</label>
+    </fieldSets>
+    <fields>
+        <fullName>Activity_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Activity Id</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Activity_Scheduled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Tracks whether the campaign member has been scheduled an activity related to the campaign.</inlineHelpText>
+        <label>Activity Scheduled</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Broker_Dealer_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(ContactId), IF(NOT ISBLANK(Contact.Broker_Dealer__c),
+         IF(ISPICKVAL(Contact.Broker_Dealer__r.Broker_Dealer_Category__c, &apos;Regional&apos;) ,&apos;Regional&apos;, 
+            IF(ISPICKVAL(Contact.Broker_Dealer__r.Broker_Dealer_Category__c, &apos;Bank&apos;) ,&apos;Bank&apos;,
+               IF(ISPICKVAL(Contact.Broker_Dealer__r.Broker_Dealer_Category__c, &apos;Independent B/D&apos;) ,&apos;Independent B/D&apos;,
+                 IF(ISPICKVAL(Contact.Broker_Dealer__r.Broker_Dealer_Category__c, &apos;Insurance - Career&apos;) ,&apos;Insurance - Career&apos;,
+                    IF(ISPICKVAL(Contact.Broker_Dealer__r.Broker_Dealer_Category__c, &apos;Insurance - Independent&apos;) ,&apos;Insurance - Independent&apos;,
+                      IF(ISPICKVAL(Contact.Broker_Dealer__r.Broker_Dealer_Category__c, &apos;Wire - National&apos;) ,&apos;Wire - National&apos;,
+                         IF(ISPICKVAL(Contact.Broker_Dealer__r.Broker_Dealer_Category__c, &apos;Wire - Regional&apos;) ,&apos;Wire - Regional&apos;,  
+                           IF(ISPICKVAL(Contact.Broker_Dealer__r.Broker_Dealer_Category__c, &apos;Other&apos;) ,&apos;Other&apos;,  &apos;&apos;
+						      )
+    	     			   )
+						 )  
+					  )	
+					)
+				  )
+				)
+			  ),&apos;&apos;)	
+
+ ,   
+         IF(NOT ISBLANK(Lead.BrokerDealer__c),IF(ISPICKVAL(Lead.BrokerDealer__r.Broker_Dealer_Category__c, &apos;Regional&apos;) ,&apos;Regional&apos;, 
+            IF(ISPICKVAL(Lead.BrokerDealer__r.Broker_Dealer_Category__c, &apos;Bank&apos;) ,&apos;Bank&apos;,
+               IF(ISPICKVAL(Lead.BrokerDealer__r.Broker_Dealer_Category__c, &apos;Independent B/D&apos;) ,&apos;Independent B/D&apos;,
+                 IF(ISPICKVAL(Lead.BrokerDealer__r.Broker_Dealer_Category__c, &apos;Insurance - Career&apos;) ,&apos;Insurance - Career&apos;,
+                    IF(ISPICKVAL(Lead.BrokerDealer__r.Broker_Dealer_Category__c, &apos;Insurance - Independent&apos;) ,&apos;Insurance - Independent&apos;,
+                      IF(ISPICKVAL(Lead.BrokerDealer__r.Broker_Dealer_Category__c, &apos;Wire - National&apos;) ,&apos;Wire - National&apos;,
+                         IF(ISPICKVAL(Lead.BrokerDealer__r.Broker_Dealer_Category__c, &apos;Wire - Regional&apos;) ,&apos;Wire - Regional&apos;,  
+                           IF(ISPICKVAL(Lead.BrokerDealer__r.Broker_Dealer_Category__c, &apos;Other&apos;) ,&apos;Other&apos;,  &apos;&apos;
+						     )
+    	     			   )
+						 ) 
+					  )	
+					)
+				  )
+				)
+			  )	,&apos;&apos;)	
+
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Dealer Category</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Broker_Dealer__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(ContactId),  Contact.Broker_Dealer__r.Name,   Lead.BrokerDealer__r.Name  )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Broker Dealer</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CampaignTypeName__c</fullName>
+        <externalId>false</externalId>
+        <formula>Campaign.RecordType.DeveloperName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CampaignTypeName</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City</fullName>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <formula>City</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>City</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cohort_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(ContactId), 
+              IF(ISPICKVAL(Contact.Cohort_Type__c, &apos;Investment Oriented&apos;) ,&apos;Investment Oriented&apos;, 
+            IF(ISPICKVAL(Contact.Cohort_Type__c, &apos;Insurance Oriented&apos;) ,&apos;Insurance Oriented&apos;, 
+                 IF(ISPICKVAL(Contact.Cohort_Type__c, &apos;Balanced&apos;) ,&apos;Balanced&apos;, &apos;&apos;
+				   ) 
+               ) 
+            ) 
+       , 
+     IF(ISPICKVAL(Lead.Cohort_Type__c, &apos;Investment Oriented&apos;) ,&apos;Investment Oriented&apos;, 
+		IF(ISPICKVAL(Lead.Cohort_Type__c, &apos;Insurance Oriented&apos;) ,&apos;Insurance Oriented&apos;, 
+			IF(ISPICKVAL(Lead.Cohort_Type__c, &apos;Balanced&apos;) ,&apos;Balanced&apos;, &apos;&apos;
+			   )
+		   )
+		)
+)</formula>
+        <label>Cohort Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cohort_sub_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  NOT ISBLANK( ContactId ) ,
+IF( ISPICKVAL(Contact.Cohort_Sub_Type__c, &apos;Asset Gatherers&apos;) , &apos;Asset Gatherers&apos;, 
+IF( ISPICKVAL(Contact.Cohort_Sub_Type__c, &apos;Financial Planners&apos;) , &apos;Financial Planners&apos;,  
+IF( ISPICKVAL(Contact.Cohort_Sub_Type__c, &apos;Hybrid Veterans&apos;) , &apos;Hybrid Veterans&apos;, 
+IF( ISPICKVAL(Contact.Cohort_Sub_Type__c, &apos;Insurance Planners&apos;) , &apos;Insurance Planners&apos;, 
+IF( ISPICKVAL(Contact.Cohort_Sub_Type__c, &apos;Product Specialists&apos;) , &apos;Product Specialists&apos;, 
+IF( ISPICKVAL(Contact.Cohort_Sub_Type__c, &apos;Transaction Sellers&apos;) , &apos;Transaction Sellers&apos;, 
+IF( ISPICKVAL(Contact.Cohort_Sub_Type__c, &apos;Transaction Sellers&apos;) , &apos;Transaction Sellers&apos;, &apos;&apos;
+) 
+) 
+)
+)
+)
+)
+)
+,
+IF( ISPICKVAL(Lead.Cohort_Sub_Type__c, &apos;Asset Gatherers&apos;) , &apos;Asset Gatherers&apos;,  
+IF( ISPICKVAL(Lead.Cohort_Sub_Type__c, &apos;Financial Planners&apos;) , &apos;Financial Planners&apos;, 
+IF( ISPICKVAL(Lead.Cohort_Sub_Type__c, &apos;Hybrid Veterans&apos;) , &apos;Hybrid Veterans&apos;, 
+IF( ISPICKVAL(Lead.Cohort_Sub_Type__c, &apos;Insurance Planners&apos;) , &apos;Insurance Planners&apos;, 
+IF( ISPICKVAL(Lead.Cohort_Sub_Type__c, &apos;Product Specialists&apos;) , &apos;Product Specialists&apos;, 
+IF( ISPICKVAL(Lead.Cohort_Sub_Type__c, &apos;Transaction Sellers&apos;) , &apos;Transaction Sellers&apos;, 
+IF( ISPICKVAL(Lead.Cohort_Sub_Type__c, &apos;Transaction Sellers&apos;) , &apos;Transaction Sellers&apos;, &apos;&apos;
+)
+)
+)
+)
+)
+)
+)
+)</formula>
+        <label>Cohort sub Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CompanyOrAccount</fullName>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>DoNotCall</fullName>
+    </fields>
+    <fields>
+        <fullName>Eloqua_Lead_Rating__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  NOT ISBLANK( ContactId ) ,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;A1&apos;) , &apos;A1&apos;,  
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;A2&apos;) , &apos;A2&apos;,  
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;A3&apos;) , &apos;A3&apos;, 
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;A4&apos;) , &apos;A4&apos;, 
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;B1&apos;) , &apos;B1&apos;, 
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;B2&apos;) , &apos;B2&apos;, 
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;B3&apos;) , &apos;B3&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;B4&apos;) , &apos;B4&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;C1&apos;) , &apos;C1&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;C2&apos;) , &apos;C2&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;C3&apos;) , &apos;C3&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;C4&apos;) , &apos;C4&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;D1&apos;) , &apos;D1&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;D2&apos;) , &apos;D2&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;D3&apos;) , &apos;D3&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;D4&apos;) , &apos;D4&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;D5&apos;) , &apos;D5&apos;,&apos;&apos;								
+)))))))))))))))))
+,
+  IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;A1&apos;) , &apos;A1&apos;,  
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;A2&apos;) , &apos;A2&apos;,  
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;A3&apos;) , &apos;A3&apos;, 
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;A4&apos;) , &apos;A4&apos;, 
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;B1&apos;) , &apos;B1&apos;, 
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;B2&apos;) , &apos;B2&apos;, 
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;B3&apos;) , &apos;B3&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;B4&apos;) , &apos;B4&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;C1&apos;) , &apos;C1&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;C2&apos;) , &apos;C2&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;C3&apos;) , &apos;C3&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;C4&apos;) , &apos;C4&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;D1&apos;) , &apos;D1&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;D2&apos;) , &apos;D2&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;D3&apos;) , &apos;D3&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;D4&apos;) , &apos;D4&apos;,
+IF( ISPICKVAL(Contact.Eloqua_Lead_Rating__c, &apos;D5&apos;) , &apos;D5&apos;,&apos;&apos;								
+)))))))))))))))))
+	)</formula>
+        <label>Eloqua Lead Rating</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+    </fields>
+    <fields>
+        <fullName>FirstName</fullName>
+    </fields>
+    <fields>
+        <fullName>FirstRespondedDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Gender__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(ContactId),
+If(ISPICKVAL( Contact.Gender__c, &apos;Male&apos;),&apos;Male&apos;,If(ISPICKVAL( Contact.Gender__c, &apos;Female&apos;),&apos;Female&apos;,&apos;&apos;)),
+If(ISPICKVAL( Lead.Gender__c, &apos;Male&apos;),&apos;Male&apos;,If(ISPICKVAL( Lead.Gender__c, &apos;Female&apos;),&apos;Female&apos;,&apos;&apos;))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gender</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfEmail</fullName>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfFax</fullName>
+    </fields>
+    <fields>
+        <fullName>HasResponded</fullName>
+    </fields>
+    <fields>
+        <fullName>IsAssociatedWithOtherCampaign__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To check if associated with other campaign</description>
+        <externalId>false</externalId>
+        <inlineHelpText>To check if associated with other campaign</inlineHelpText>
+        <label>IsAssociatedWithOtherCampaign</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LastName</fullName>
+    </fields>
+    <fields>
+        <fullName>Last_Activity_By__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT ISBLANK(ContactId),   Contact.Last_Activity_By__c ,    Lead.Last_Activity_By__c   )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Last Activity By</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeadId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Third Party Recruiter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cold Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Industry Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lincoln Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RR Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesaler</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Website Inquiry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>List Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MobilePhone</fullName>
+    </fields>
+    <fields>
+        <fullName>Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Campaign_Members</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>PostalCode</fullName>
+    </fields>
+    <fields>
+        <fullName>Salutation</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Mr.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ms.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mrs.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dr.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prof.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>State</fullName>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <formula>State</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>State</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Attended</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Did Not Attend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Did not RSVP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Received</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Responded</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RSVP’d</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Something New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Street</fullName>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+    </fields>
+    <validationRules>
+        <fullName>Associate_Contact_with_Master_Campaign</fullName>
+        <active>false</active>
+        <description>Associate Contact with Master Campaign if owner is Central database</description>
+        <errorConditionFormula>AND( ContactId != NULL,  Contact.Owner.Alias &lt;&gt; &apos;cdata&apos; )
+&amp;&amp; $Profile.Name != &apos;System Administrator&apos;</errorConditionFormula>
+        <errorMessage>Only Prospect from Central Database can be added as Campaign Members</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Associate_Lead_with_Master_Campaign</fullName>
+        <active>true</active>
+        <description>Associate Lead with Master Campaign if owner is Central database</description>
+        <errorConditionFormula>AND( LeadId != NULL,  Lead.Owner:User.Alias &lt;&gt; &apos;cdata&apos;)
+&amp;&amp; $Profile.Name != &apos;System Administrator&apos;</errorConditionFormula>
+        <errorMessage>Only Lead from Central Database can be added as Campaign Members</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Add_Members</fullName>
+        <active>true</active>
+        <description>Except Business Owner and System Admin, no one can add Members to Master Campaign</description>
+        <errorConditionFormula>Campaign.RecordType.DeveloperName  =  &apos;Campaign_Master&apos; &amp;&amp; ($Profile.Name = &apos;Director of Recruiting&apos; || $Profile.Name = &apos;Finance&apos; || $Profile.Name = &apos;Managing Director&apos; || $Profile.Name = &apos;Managing Principal&apos; || $Profile.Name = &apos;National Recruiter&apos; || $Profile.Name = &apos;Transition&apos; || $Profile.Name = &apos;Registration&apos; || $Profile.Name = &apos;Transition&apos; || $Profile.Name = &apos;Compliance&apos;)
+&amp;&amp; ($Profile.Name != &apos;System Administrator&apos; &amp;&amp; $Profile.Name != &apos;API - Eloqua&apos;)</errorConditionFormula>
+        <errorMessage>Only Business Owner can add Member in Master Campaign</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Assign_Owners</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Assign Owners</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>alert(&apos;*** Coming Soon: Assigns recruiters to contacts for the activity workflows. ***&apos;);</url>
+    </webLinks>
+</CustomObject>

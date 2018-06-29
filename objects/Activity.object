@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Activity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity Type</label>
+        <picklist>
+            <controllingField>Activity__c</controllingField>
+            <picklistValues>
+                <fullName>Open House</fullName>
+                <default>false</default>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>One-on-One</fullName>
+                <default>false</default>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Networking</fullName>
+                <default>false</default>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Conference</fullName>
+                <default>false</default>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Activity__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>To-Do</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Eloqua</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CampEndDate__c</fullName>
+        <externalId>false</externalId>
+        <label>CampEndDate</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CampName__c</fullName>
+        <description>This is used for Campaign Activity Report.</description>
+        <externalId>false</externalId>
+        <label>CampName</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CampStartDate__c</fullName>
+        <externalId>false</externalId>
+        <label>CampStartDate</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CampaignId__c</fullName>
+        <description>To store Campaign Id</description>
+        <externalId>false</externalId>
+        <inlineHelpText>To store Campaign Id</inlineHelpText>
+        <label>CampaignId</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Campaign_Stage_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Stage Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(LEFT(WhoId,3)=&apos;003&apos;,&apos;Prospect&apos;,IF(LEFT(WhoId,3)=&apos;00Q&apos;,&apos;Lead&apos;,&apos;&apos;))</formula>
+        <label>Contact Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duration_in_Minutes__c</fullName>
+        <externalId>false</externalId>
+        <label>Duration in Minutes</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Former_Activity_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>Former Activity Id</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>IsCampAborted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This is used for Campaign Activity Report.</description>
+        <externalId>false</externalId>
+        <label>IsCampAborted</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsCampActive__c</fullName>
+        <description>This is used for Campaign Activity Report.</description>
+        <externalId>false</externalId>
+        <formula>AND(Today()&gt;= CampStartDate__c,Today()&lt;= CampEndDate__c ,NOT(ISNULL(CampStartDate__c)), NOT(ISNULL(CampEndDate__c)), IsCampAborted__c=False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsCampInProgress</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsCampActivity__c</fullName>
+        <description>To check if the Activity is Realted to Campaign - used in Campaign Activity Report as a filter</description>
+        <externalId>false</externalId>
+        <formula>AND(WhoId!=&apos;&apos;,OR(LEFT(WhatId,3)=&apos;701&apos;,CampaignId__c!=&apos;&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsCampActivity</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsCampCompleted__c</fullName>
+        <description>This is used for Campaign Activity Report.</description>
+        <externalId>false</externalId>
+        <formula>AND(Today()&gt; CampEndDate__c , NOT(ISNULL(CampEndDate__c)),  IsCampAborted__c =False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsCampCompleted</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsIntroduction__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Id  &lt;&gt;  CreatedById</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IsIntroduction</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Activity_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Activity By</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>My_Activity__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Owner:User.Id=$User.Id, true, false)</formula>
+        <label>My Activity</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ParentCampName__c</fullName>
+        <description>This is used for Campaign Activity Report.</description>
+        <externalId>false</externalId>
+        <label>ParentCampName</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Purpose__c</fullName>
+        <externalId>false</externalId>
+        <label>Purpose</label>
+        <picklist>
+            <controllingField>Activity__c</controllingField>
+            <picklistValues>
+                <fullName>Introduction</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualify</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Initial Call</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Follow Up/Call Back</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confirm Literature Received</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confirm Meeting</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discuss Opportunities</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Regarding__c</fullName>
+        <description>Not Used Any more, Subject field is relabeled as Regarding</description>
+        <externalId>false</externalId>
+        <label>Regarding</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Result__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter a result when changing the status to Completed if task is related to Lead.</inlineHelpText>
+        <label>Result</label>
+        <picklist>
+            <controllingField>Activity__c</controllingField>
+            <picklistValues>
+                <fullName>Direct Contact</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Left Message/VM</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unsuccessful</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Phone Call</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Did Not Show</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Successful - Follow Up Scheduled</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unsuccessful - Follow Up Scheduled</fullName>
+                <default>false</default>
+                <controllingFieldValues>Email</controllingFieldValues>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+                <controllingFieldValues>To-Do</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Success - Follow Up Scheduled</fullName>
+                <default>false</default>
+                <controllingFieldValues>Meeting</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SalesLogix_Activity_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SalesLogix Activity Id</label>
+        <length>12</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Sequence__c</fullName>
+        <externalId>false</externalId>
+        <label>Sequence</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>AllActivities</fullName>
+        <filterScope>Team</filterScope>
+        <label>All Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyActivities</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyDelegatedActivities</fullName>
+        <filterScope>Delegated</filterScope>
+        <label>My Delegated Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyTeamsActivities</fullName>
+        <filterScope>Team</filterScope>
+        <label>My Team&apos;s Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysTasks</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>lessThan</operation>
+            <value>TOMORROW</value>
+        </filters>
+        <label>Today&apos;s Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>UpcomingEvents</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>greaterThan</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Upcoming Events</label>
+    </listViews>
+    <searchLayouts>
+        <searchResultsAdditionalFields>TASK.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHO_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHAT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.DUE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

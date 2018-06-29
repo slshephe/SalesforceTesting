@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Date__c</fullName>
+        <description>Date of Corresponding Milestone from Opportunity</description>
+        <externalId>false</externalId>
+        <formula>if(ISPICKVAL(Milestone__c, &apos;Offers Accepted&apos;), Opportunity__r.Offer_Accepted__c, 
+if(ISPICKVAL(Milestone__c, &apos;Offers Declined&apos;), Opportunity__r.Offer_Declined__c,
+if(ISPICKVAL(Milestone__c, &apos;Offers Outstanding&apos;),Opportunity__r.Offer_Letter_Sent__c ,
+if(ISPICKVAL(Milestone__c, &apos;Offer Letters Sent&apos;),Opportunity__r.Offer_Letter_Sent__c ,
+if(ISPICKVAL(Milestone__c, &apos;Prelim Applications Approved&apos;), Opportunity__r.Prelim_App_Approved__c,
+if(ISPICKVAL(Milestone__c, &apos;Prelim Applications Received&apos;), Opportunity__r.Preliminary_App_Received__c,
+if(ISPICKVAL(Milestone__c, &apos;Prelim Applications Sent&apos;), Opportunity__r.Preliminary_App_Sent__c,
+if(ISPICKVAL(Milestone__c, &apos;Recruitment Kit&apos;), Opportunity__r.Contact__r.Recruitment_Kit__c,
+if(ISPICKVAL(Milestone__c, &apos;FINRA Effective&apos;), Opportunity__r.FINRA_Effective_Date__c,today()
+         )
+        )  
+       )
+      ) 
+     ) 
+    )
+   )
+  )
+)</formula>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GDC__c</fullName>
+        <description>GDC of Opportunity</description>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Actual_GDC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GDC</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Milestone__c</fullName>
+        <externalId>false</externalId>
+        <label>Milestone</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Offer Letters Sent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Offers Accepted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Offers Declined</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prelim Applications Sent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prelim Applications Received</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prelim Applications Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recruitment Kit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FINRA Effective</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunity Milestone</relationshipLabel>
+        <relationshipName>Milestone</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <label>Milestones</label>
+    <nameField>
+        <displayFormat>M{00000}</displayFormat>
+        <label>Milestone Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Milestones</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

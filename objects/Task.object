@@ -1,0 +1,1831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ActivityDate</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>IsRecurrence</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+                <highPriority>true</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>true</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <closed>true</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recruiting NOW – Power Hour</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Brokerage/Product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Demo/Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Onsite Visit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LFN National Event</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conference/Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <recordTypes>
+        <fullName>Campaign_Stage</fullName>
+        <active>true</active>
+        <description>Task activity associated to a Campaign.  Can be set up by a System Administrator only.</description>
+        <label>Campaign Stage</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Networking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One-on-One</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open House</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>To-Do</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Purpose__c</picklist>
+            <values>
+                <fullName>Confirm Literature Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirm Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discuss Opportunities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up%2FCall Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Introduction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualify</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Result__c</picklist>
+            <values>
+                <fullName>Did Not Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left Message%2FVM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Successful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Brokerage%2FProduct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference%2FMeeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo%2FTraining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LFN National Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Onsite Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting NOW %E2%80%93 Power Hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transition</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>ChildCampaignTask</fullName>
+        <active>true</active>
+        <description>ChildCampaignTask</description>
+        <label>ChildCampaignTask</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Networking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One-on-One</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open House</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>To-Do</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Purpose__c</picklist>
+            <values>
+                <fullName>Confirm Literature Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirm Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discuss Opportunities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up%2FCall Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Introduction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualify</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Result__c</picklist>
+            <values>
+                <fullName>Did Not Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left Message%2FVM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Successful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Brokerage%2FProduct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference%2FMeeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo%2FTraining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LFN National Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Onsite Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting NOW %E2%80%93 Power Hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transition</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Eloqua_Task</fullName>
+        <active>true</active>
+        <description>Type designated for tasks generated from Eloqua</description>
+        <label>Eloqua Task</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Networking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One-on-One</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open House</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity__c</picklist>
+            <values>
+                <fullName>Eloqua</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Purpose__c</picklist>
+            <values>
+                <fullName>Confirm Literature Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirm Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discuss Opportunities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up%2FCall Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Introduction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualify</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Result__c</picklist>
+            <values>
+                <fullName>Did Not Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left Message%2FVM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Success - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Successful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Brokerage%2FProduct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference%2FMeeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo%2FTraining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LFN National Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Onsite Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting NOW %E2%80%93 Power Hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transition</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Lead_Task</fullName>
+        <active>true</active>
+        <description>Creating task for a Lead - All user can create across the Org</description>
+        <label>Lead Task</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Networking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One-on-One</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open House</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>To-Do</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Purpose__c</picklist>
+            <values>
+                <fullName>Confirm Literature Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirm Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discuss Opportunities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up%2FCall Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Introduction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualify</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Result__c</picklist>
+            <values>
+                <fullName>Did Not Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Contact</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Left Message%2FVM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Successful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Brokerage%2FProduct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference%2FMeeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo%2FTraining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LFN National Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Onsite Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting NOW %E2%80%93 Power Hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transition</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MasterCampaignTask</fullName>
+        <active>true</active>
+        <description>MasterCampaignTask</description>
+        <label>MasterCampaignTask</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Networking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One-on-One</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open House</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>To-Do</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Purpose__c</picklist>
+            <values>
+                <fullName>Confirm Literature Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirm Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discuss Opportunities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up%2FCall Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Introduction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualify</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Result__c</picklist>
+            <values>
+                <fullName>Did Not Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left Message%2FVM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Successful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Brokerage%2FProduct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference%2FMeeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo%2FTraining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LFN National Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Onsite Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting NOW %E2%80%93 Power Hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transition</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Opportunity_Task</fullName>
+        <active>true</active>
+        <description>Task activity associated for an Opportunity.</description>
+        <label>Opportunity Task</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Networking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>One-on-One</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open House</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>To-Do</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Purpose__c</picklist>
+            <values>
+                <fullName>Confirm Literature Received</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Confirm Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Discuss Opportunities</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up%2FCall Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initial Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Introduction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qualify</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Result__c</picklist>
+            <values>
+                <fullName>Did Not Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Left Message%2FVM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Successful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful - Follow Up Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Brokerage%2FProduct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference%2FMeeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo%2FTraining</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LFN National Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Onsite Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recruiting NOW %E2%80%93 Power Hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transition</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Cannot_Change_Owner_on_Eloqua_Tasks</fullName>
+        <active>true</active>
+        <description>No one can change the assigned to on Eloqua Tasks</description>
+        <errorConditionFormula>AND (RecordType.DeveloperName = &apos;Eloqua_Task&apos;, ISCHANGED ( OwnerId),  $Profile.Name != &apos;API - Eloqua&apos;,$Profile.Name != &apos;System Administrator&apos;)</errorConditionFormula>
+        <errorMessage>You cannot change the activity owner</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prospect_is_Required_for_Opty_Task</fullName>
+        <active>false</active>
+        <description>To ensure that Prospect (WhoId) is selected for an Task.</description>
+        <errorConditionFormula>AND($Profile.Name  &lt;&gt; &apos;System Administrator&apos;, $Profile.Name  &lt;&gt; &apos;Business Owner&apos;,ISBLANK( WhoId ))</errorConditionFormula>
+        <errorDisplayField>WhoId</errorDisplayField>
+        <errorMessage>Lead/Prospect is Required</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidateResult</fullName>
+        <active>true</active>
+        <description>Rule to ensure result is populated on completing the task</description>
+        <errorConditionFormula>ISPICKVAL(Status,&apos;Completed&apos;) &amp;&amp; 
+ISPICKVAL(Result__c, &quot;&quot;) &amp;&amp; 
+NOT ISPICKVAL(Activity__c ,&quot;&quot;) &amp;&amp; 
+NOT ISPICKVAL(Activity__c ,&quot;To-Do&quot;) &amp;&amp; 
+NOT ISPICKVAL(Activity__c ,&quot;Email&quot;) &amp;&amp; 
+NOT ISPICKVAL(Purpose__c, &quot;&quot;)
+&amp;&amp; $Profile.Name != &apos;System Administrator&apos;</errorConditionFormula>
+        <errorMessage>Please enter a Result when changing the status to Completed.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Log_a_Call_Account</fullName>
+        <availability>online</availability>
+        <description>Custom button with Log a call Functionality. Created as part of FGX-300-61923</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log a Call</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!URLFOR($Action.Task.NewTask, null, 
+ [
+ &quot;what_id&quot;= Account.Id,
+ &quot;retURL&quot;=&quot;/%2F&quot;+Account.Id,
+&quot;00N40000002WIUr&quot;=&quot;Phone Call&quot;,
+&quot;00N40000002WIV1&quot;=&quot;Outbound&quot;,
+&quot;00N40000002WIUr_fu&quot;=&quot;Phone Call&quot;,
+&quot;00N40000002WIV1_fu&quot;=&quot;Outbound&quot;,
+&quot;followup&quot;=1,&quot;tsk5&quot;=&quot;call&quot;
+   ])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_a_Call_Case</fullName>
+        <availability>online</availability>
+        <description>Custom button with Log a call Functionality for case page layout. Created as part of FGX-300-61923</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log a Call</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!URLFOR($Action.Task.NewTask, null, 
+ [
+ &quot;what_id&quot;= Case.Id,
+ &quot;retURL&quot;=&quot;/%2F&quot;+Case.Id,
+&quot;00N40000002WIUr&quot;=&quot;Phone Call&quot;,
+&quot;00N40000002WIV1&quot;=&quot;Outbound&quot;,
+&quot;00N40000002WIUr_fu&quot;=&quot;Phone Call&quot;,
+&quot;00N40000002WIV1_fu&quot;=&quot;Outbound&quot;,
+&quot;followup&quot;=1,&quot;tsk5&quot;=&quot;call&quot;
+   ])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_a_Call_Contact</fullName>
+        <availability>online</availability>
+        <description>Custom button with Log a call Functionality for contact page layout. Created as part of FGX-300-61923</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log a Call</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!URLFOR($Action.Task.NewTask, null, 
+ [
+ &quot;who_id&quot;= Contact.Id,
+ &quot;retURL&quot;=&quot;/%2F&quot;+Contact.Id,
+&quot;00N40000002WIUr&quot;=&quot;Phone Call&quot;,
+&quot;00N40000002WIV1&quot;=&quot;Outbound&quot;,
+&quot;00N40000002WIUr_fu&quot;=&quot;Phone Call&quot;,
+&quot;00N40000002WIV1_fu&quot;=&quot;Outbound&quot;,
+&quot;followup&quot;=1,&quot;tsk5&quot;=&quot;call&quot;
+   ])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_a_Call_Lead</fullName>
+        <availability>online</availability>
+        <description>Custom button with Log a call Functionality forLead page layout. Created as part of FGX-300-61923</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log a Call</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!URLFOR($Action.Task.NewTask, null, 
+ [
+ &quot;who_id&quot;= Lead.Id,
+ &quot;retURL&quot;=&quot;/%2F&quot;+Lead.Id,
+&quot;00N40000002WIUr&quot;=&quot;Phone Call&quot;,
+&quot;00N40000002WIV1&quot;=&quot;Outbound&quot;,
+&quot;00N40000002WIUr_fu&quot;=&quot;Phone Call&quot;,
+&quot;00N40000002WIV1_fu&quot;=&quot;Outbound&quot;,
+&quot;followup&quot;=1,&quot;tsk5&quot;=&quot;call&quot;
+   ])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_a_Call_Opportunity</fullName>
+        <availability>online</availability>
+        <description>Log a Call custom button for Opportunity Layouts . Created as part of GVD-448-11326</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log a Call</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!URLFOR($Action.Task.NewTask, null, 
+[ 
+&quot;what_id&quot;= Opportunity.Id, 
+&quot;retURL&quot;=&quot;/%2F&quot;+Opportunity.Id, 
+&quot;00N40000002WIUr&quot;=&quot;Phone Call&quot;, 
+&quot;00N40000002WIV1&quot;=&quot;Outbound&quot;, 
+&quot;00N40000002WIUr_fu&quot;=&quot;Phone Call&quot;, 
+&quot;00N40000002WIV1_fu&quot;=&quot;Outbound&quot;, 
+&quot;followup&quot;=1,&quot;tsk5&quot;=&quot;call&quot; 
+])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_an_Activity</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log an Activity</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!URLFOR($Action.Task.NewTask, null,
+[
+&quot;who_id&quot;=Contact.Id,
+&quot;retURL&quot;=&quot;/&quot;+Contact.Id,
+&quot;followup&quot;=1,
+&quot;status&quot;=&quot;Completed&quot;
+])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Lead_Task</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Lead Task</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>https://cs15.salesforce.com/apex/ActivityRecordTypeSelectionPage?LeadId={!Lead.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Schedule_a_Call</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Schedule a Call</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!URLFOR($Action.Task.NewTask, null,
+[
+&quot;who_id&quot;=Contact.Id,
+&quot;retURL&quot;=&quot;/&quot;+Contact.Id,
+&quot;00N40000002WIUr&quot;=&quot;Phone Call&quot;
+])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Schedule_a_To_Do</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Schedule a To-Do</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!URLFOR($Action.Task.NewTask, null,
+[
+&quot;who_id&quot;=Contact.Id,
+&quot;retURL&quot;=&quot;/&quot;+Contact.Id,
+&quot;00N40000002WIUr&quot;=&quot;To-Do&quot;
+])}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Schedule_an_Email</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Schedule an Email</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!URLFOR($Action.Task.NewTask, null,
+[
+&quot;who_id&quot;=Contact.Id,
+&quot;retURL&quot;=&quot;/&quot;+Contact.Id,
+&quot;00N40000002WIUr&quot;=&quot;Email&quot;
+])}</url>
+    </webLinks>
+</CustomObject>

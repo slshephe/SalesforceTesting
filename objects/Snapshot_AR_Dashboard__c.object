@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This is a tarrget object for 3 Analytic Snapshots that capture Activity, Open Opportunity and Onboarded Opportunity summaries via 3 individual Summary Reports.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>ActivityCount__c</fullName>
+        <externalId>false</externalId>
+        <label>ActivityCount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_GDC__c</fullName>
+        <description>Actual GDC of the Opportunity</description>
+        <externalId>false</externalId>
+        <label>Actual GDC</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Closed_Date__c</fullName>
+        <description>Closed Date of Task</description>
+        <externalId>false</externalId>
+        <label>Activity Close Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Created_Date__c</fullName>
+        <description>Created Date of Opportunity</description>
+        <externalId>false</externalId>
+        <label>Oppty Created Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Created_Date__c)),Created_Date__c,(IF(NOT(ISBLANK( FINRA_Effective_Date__c )), FINRA_Effective_Date__c,(IF(NOT(ISBLANK(  Closed_Date__c  )), Closed_Date__c,Today())))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Execution_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Execution Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>FINRA_Effective_Date__c</fullName>
+        <description>FINRA Effective Date of Opportunity</description>
+        <externalId>false</externalId>
+        <label>FINRA Effective Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityCount__c</fullName>
+        <description>Count of records</description>
+        <externalId>false</externalId>
+        <label>OpportunityCount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Snapshot AR Dashboard</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Recruiter</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Snapshot AR Dashboard</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>ActivityCount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Closed_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OpportunityCount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Created_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Actual_GDC__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FINRA_Effective_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Execution_Time__c</customTabListAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchResultsAdditionalFields>ActivityCount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Closed_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OpportunityCount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Created_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Actual_GDC__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FINRA_Effective_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Execution_Time__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

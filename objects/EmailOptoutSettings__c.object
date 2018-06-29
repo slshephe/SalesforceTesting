@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>created as part of NPF-154-85450</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>IsDiscoveryLoad__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IsDiscoveryLoad</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>EmailOptoutSettings</label>
+    <visibility>Public</visibility>
+</CustomObject>
